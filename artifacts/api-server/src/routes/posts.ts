@@ -66,37 +66,240 @@ router.get("/posts", async (req, res) => {
     if (posts.length === 0 && !existingPost) {
       const seeded = [
         {
-          id: "pinned",
-          copy: "سعدت بهذا اللقاء للحديث عن توسيع آفاق البرامج التي تصنع أثراً حقيقياً في حياة الناس. نواصل العمل مع شركائنا لدعم المبادرات الرياضية والثقافية والمجتمعية في المملكة.",
-          imagePath: "/images/turki_al_alshikh_cover.jpeg",
-          timeLabel: "منذ ساعة",
-          likes: 84200,
-          comments: 3820,
-          shares: 2450,
-          pinned: true,
+                "id": "thuraiya-photo-1",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-1.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
         },
         {
-          id: "community",
-          copy: "تمكين المواهب السعودية ودعم الأفكار الطموحة مسؤولية نؤمن بها. كل مشروع جديد يفتح مساحة أكبر للإبداع، وكل قصة نجاح تضيف فصلاً جميلاً إلى مسيرة وطننا.",
-          imagePath: "/images/turki_al_alshikh_portrait.jpeg",
-          timeLabel: "منذ 3 ساعات",
-          likes: 61700,
-          comments: 2140,
-          shares: 1740,
-          pinned: false,
+                "id": "thuraiya-photo-2",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-2.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
         },
         {
-          id: "weekend",
-          copy: "نحتفي بكل من يضيف قيمة إلى المشهد الرياضي والترفيهي والثقافي. شكراً لكل فريق يعمل بإخلاص خلف الكواليس، فالتفاصيل الصغيرة هي التي تصنع التجربة الكبيرة.",
-          imagePath: null,
-          timeLabel: "أمس",
-          likes: 44900,
-          comments: 1260,
-          shares: 980,
-          pinned: false,
+                "id": "thuraiya-photo-3",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-3.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
         },
-      ];
-      await db.insert(postsTable).values(seeded).onConflictDoNothing();
+        {
+                "id": "thuraiya-photo-4",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-4.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
+        },
+        {
+                "id": "thuraiya-photo-6",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-6.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
+        },
+        {
+                "id": "thuraiya-photo-7",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-7.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
+        },
+        {
+                "id": "thuraiya-photo-8",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-8.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
+        },
+        {
+                "id": "thuraiya-photo-10",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-10.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
+        },
+        {
+                "id": "thuraiya-photo-11",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-11.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
+        },
+        {
+                "id": "thuraiya-photo-12",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-12.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
+        },
+        {
+                "id": "thuraiya-photo-13",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-13.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
+        },
+        {
+                "id": "thuraiya-photo-14",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-14.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
+        },
+        {
+                "id": "thuraiya-photo-15",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-15.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
+        },
+        {
+                "id": "thuraiya-photo-16",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-16.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
+        },
+        {
+                "id": "thuraiya-photo-17",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-17.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
+        },
+        {
+                "id": "thuraiya-photo-18",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-18.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
+        },
+        {
+                "id": "thuraiya-photo-19",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-19.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
+        },
+        {
+                "id": "thuraiya-photo-20",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-20.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
+        },
+        {
+                "id": "thuraiya-photo-21",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-21.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
+        },
+        {
+                "id": "thuraiya-photo-22",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-22.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
+        },
+        {
+                "id": "thuraiya-photo-23",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-23.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
+        },
+        {
+                "id": "thuraiya-photo-24",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-24.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
+        },
+        {
+                "id": "thuraiya-photo-25",
+                "copy": "",
+                "imagePath": "/images/account-posts/post-25.jpg",
+                "timeLabel": "من المعرض",
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "pinned": false
+        }
+];
+      await db.insert(postsTable).values(seeded.map((post, index) => ({
+        ...post,
+        createdAt: new Date(Date.now() - index * 1000),
+      }))).onConflictDoNothing();
       posts = await db
         .select()
         .from(postsTable)

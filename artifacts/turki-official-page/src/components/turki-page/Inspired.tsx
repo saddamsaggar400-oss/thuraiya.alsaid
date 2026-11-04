@@ -7,8 +7,7 @@ import {
 } from "lucide-react";
 import "./turki-page.css";
 
-const portrait = "/images/latifa/profile-detailed.png";
-const cover = "/images/turki_al_alshikh_cover.jpeg";
+const profileImage = "/images/account-profile.jpg";
 
 type TabKey = "all" | "spotlight" | "related" | "stories";
 
@@ -62,35 +61,258 @@ const defaultAppearance: Appearance = {
 
 const initialPosts: Post[] = [
   {
-    id: "pinned",
-    time: "منذ ساعة",
-    copy: "سعدت بهذا اللقاء للحديث عن توسيع آفاق البرامج التي تصنع أثراً حقيقياً في حياة الناس. نواصل العمل مع شركائنا لدعم المبادرات الرياضية والثقافية والمجتمعية في المملكة.",
-    image: cover,
-    likes: 84200,
-    comments: 3820,
-    shares: 2450,
-    liked: true,
-    pinned: true,
+    "id": "thuraiya-photo-1",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-1.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
   },
   {
-    id: "community",
-    time: "منذ 3 ساعات",
-    copy: "تمكين المواهب السعودية ودعم الأفكار الطموحة مسؤولية نؤمن بها. كل مشروع جديد يفتح مساحة أكبر للإبداع، وكل قصة نجاح تضيف فصلاً جميلاً إلى مسيرة وطننا.",
-    image: portrait,
-    likes: 61700,
-    comments: 2140,
-    shares: 1740,
-    liked: false,
+    "id": "thuraiya-photo-2",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-2.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
   },
   {
-    id: "weekend",
-    time: "أمس",
-    copy: "نحتفي بكل من يضيف قيمة إلى المشهد الرياضي والترفيهي والثقافي. شكراً لكل فريق يعمل بإخلاص خلف الكواليس، فالتفاصيل الصغيرة هي التي تصنع التجربة الكبيرة.",
-    likes: 44900,
-    comments: 1260,
-    shares: 980,
-    liked: false,
+    "id": "thuraiya-photo-3",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-3.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
   },
+  {
+    "id": "thuraiya-photo-4",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-4.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
+  },
+  {
+    "id": "thuraiya-photo-6",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-6.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
+  },
+  {
+    "id": "thuraiya-photo-7",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-7.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
+  },
+  {
+    "id": "thuraiya-photo-8",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-8.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
+  },
+  {
+    "id": "thuraiya-photo-10",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-10.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
+  },
+  {
+    "id": "thuraiya-photo-11",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-11.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
+  },
+  {
+    "id": "thuraiya-photo-12",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-12.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
+  },
+  {
+    "id": "thuraiya-photo-13",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-13.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
+  },
+  {
+    "id": "thuraiya-photo-14",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-14.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
+  },
+  {
+    "id": "thuraiya-photo-15",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-15.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
+  },
+  {
+    "id": "thuraiya-photo-16",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-16.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
+  },
+  {
+    "id": "thuraiya-photo-17",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-17.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
+  },
+  {
+    "id": "thuraiya-photo-18",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-18.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
+  },
+  {
+    "id": "thuraiya-photo-19",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-19.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
+  },
+  {
+    "id": "thuraiya-photo-20",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-20.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
+  },
+  {
+    "id": "thuraiya-photo-21",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-21.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
+  },
+  {
+    "id": "thuraiya-photo-22",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-22.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
+  },
+  {
+    "id": "thuraiya-photo-23",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-23.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
+  },
+  {
+    "id": "thuraiya-photo-24",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-24.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
+  },
+  {
+    "id": "thuraiya-photo-25",
+    "time": "من المعرض",
+    "copy": "",
+    "image": "/images/account-posts/post-25.jpg",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "liked": false,
+    "pinned": false
+  }
 ];
 
 const TABS: { key: TabKey; label: string; icon: React.ReactNode }[] = [
@@ -179,10 +401,10 @@ function PostDetailDialog({
 
         <div className="tp-dialog-body">
           <div className="tp-author-row">
-            <img src={portrait} className="tp-author-avatar" alt="لطيفة بنت محمد بن راشد آل مكتوم" />
+            <img src={profileImage} className="tp-author-avatar" alt="ثريا بنت ثويني بن سيف آل سعيد" />
             <div>
               <div className="tp-author-name">
-                hhshklatifa
+                thuraiya.alsaid
                 <VerifiedBadge />
               </div>
             </div>
@@ -714,7 +936,7 @@ export default function Inspired() {
         <button className="ig-sidebar-item" onClick={() => setChatOpen(true)} title="الرسائل"><MessageCircle size={24} /></button>
         <button className="ig-sidebar-item" onClick={() => notify("لا توجد إشعارات جديدة")} title="الإشعارات"><Heart size={24} /></button>
         <button className="ig-sidebar-item" onClick={openComposerOrSignIn} title="إنشاء"><PlusSquare size={24} /></button>
-        <button className="ig-sidebar-item" title="الملف الشخصي"><img src={portrait} className="avatar" alt="Profile" /></button>
+        <button className="ig-sidebar-item" title="الملف الشخصي"><img src={profileImage} className="avatar" alt="Profile" /></button>
         <div className="ig-sidebar-item spacer" />
         <button className="ig-sidebar-item" onClick={() => notify("المزيد من الخيارات")} title="المزيد"><Menu size={24} /></button>
       </nav>
@@ -725,7 +947,7 @@ export default function Inspired() {
         <button className="ig-sidebar-item" onClick={() => document.querySelector<HTMLInputElement>('.ig-search-input')?.focus()}><Search size={24} /></button>
         <button className="ig-sidebar-item" onClick={openComposerOrSignIn}><PlusSquare size={24} /></button>
         <button className="ig-sidebar-item" onClick={() => setActiveTab("spotlight")}><MonitorPlay size={24} /></button>
-        <button className="ig-sidebar-item"><img src={portrait} className="avatar" alt="Profile" /></button>
+        <button className="ig-sidebar-item"><img src={profileImage} className="avatar" alt="Profile" /></button>
       </nav>
 
       <main className="ig-main">
@@ -733,27 +955,27 @@ export default function Inspired() {
           <header className="ig-profile-header">
             <div className="ig-profile-avatar">
               <div className="ig-story-ring" onClick={() => setActiveTab("stories")}>
-                <img src={portrait} alt="لطيفة بنت محمد بن راشد آل مكتوم" />
+                <img src={profileImage} alt="ثريا بنت ثويني بن سيف آل سعيد" />
               </div>
             </div>
             
             <section className="ig-profile-info">
               <div className="ig-username-row">
-                <h1 className="ig-username">hhshklatifa</h1>
+                <h1 className="ig-username">thuraiya.alsaid</h1>
                 <VerifiedBadge />
                 <button className="ig-more-btn" onClick={() => setShareOpen(true)}><MoreHorizontal size={24} /></button>
               </div>
               
               <div className="ig-stats-row">
-                <span><strong>{formatArabicNumber(1724)}</strong> من المنشورات</span>
+                <span><strong>{formatArabicNumber(posts.length)}</strong> من المنشورات</span>
                 <span><strong>{formatArabicNumber(1700000)}</strong> متابع</span>
                 <span><strong>{formatArabicNumber(509)}</strong> أتابع</span>
               </div>
 
-              <div className="ig-english-name">Latifa M R Al Maktoum</div>
+              <div className="ig-english-name">Thuraiya Al Said</div>
               
               <div className="ig-bio">
-                <h2 className="ig-real-name">لطيفة بنت محمد بن راشد آل مكتوم</h2>
+                <h2 className="ig-real-name">ثريا بنت ثويني بن سيف آل سعيد</h2>
                 <div className="ig-bio-text">
                   Chairperson @DubaiCulture<br/>
                   Member @dubaicouncil &amp; @tecofdubai<br/>
@@ -860,7 +1082,7 @@ export default function Inspired() {
             <button className="tp-dialog-close" onClick={() => setShareOpen(false)} aria-label="إغلاق"><X size={24} /></button>
             <h3 style={{ marginTop: 0, textAlign: 'center' }}>مشاركة</h3>
             <div style={{ background: '#262626', padding: 12, borderRadius: 8, marginTop: 16, direction: 'ltr', textAlign: 'left', wordBreak: 'break-all' }}>
-              hhshklatifa
+              thuraiya.alsaid
             </div>
             <button className="tp-primary-btn" style={{ marginTop: 16 }} onClick={copyShareLink}>نسخ الرابط</button>
           </div>
@@ -905,8 +1127,8 @@ export default function Inspired() {
             </button>
           )}
           <div className="ig-story-viewer-author">
-            <img src={portrait} alt="" />
-            <strong>hhshklatifa</strong>
+            <img src={profileImage} alt="" />
+            <strong>thuraiya.alsaid</strong>
           </div>
           <img className="ig-story-viewer-image" src={activeStory.imagePath} alt="ستوري" onClick={(event) => event.stopPropagation()} />
         </div>

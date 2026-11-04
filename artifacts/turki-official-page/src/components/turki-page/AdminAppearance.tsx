@@ -110,7 +110,7 @@ export default function AdminAppearance() {
         </section>
         <section className="appearance-preview" style={previewStyle}>
           <p>معاينة مباشرة</p>
-          <div className="preview-profile"><img src="/images/latifa/profile-detailed.png" alt="" /><div><strong>hhshklatifa</strong><span>Latifa M R Al Maktoum</span></div></div>
+          <div className="preview-profile"><img src="/images/account-profile.jpg" alt="" /><div><strong>thuraiya.alsaid</strong><span>Thuraiya Al Said</span></div></div>
           <div className="preview-buttons"><button>متابعة</button><button>مراسلة</button></div>
           <div className="preview-highlights">{["my-dubai", "family", "wef-davos"].map((name) => <img key={name} src={`/images/latifa/${name}.png`} alt="" />)}</div>
         </section>

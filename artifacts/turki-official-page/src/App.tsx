@@ -77,22 +77,22 @@ function RoutedErrorBoundary({ children }: { children: ReactNode }) {
 
 function App() {
   useEffect(() => {
-    document.title = 'لطيفة بنت محمد | الصفحة الرسمية';
+    document.title = 'ثريا بنت ثويني بن سيف آل سعيد | الملف الشخصي';
     document.documentElement.lang = 'ar';
     document.documentElement.dir = 'rtl';
 
     const metadata: Record<string, string> = {
       description:
-        'الصفحة الرسمية الموثقة للشيخة لطيفة بنت محمد بن راشد آل مكتوم.',
-      'og:title': 'لطيفة بنت محمد | الصفحة الرسمية',
+        'الملف الشخصي لـثريا بنت ثويني بن سيف آل سعيد.',
+      'og:title': 'ثريا بنت ثويني بن سيف آل سعيد | الملف الشخصي',
       'og:description':
-        'تابع التحديثات الرسمية للشيخة لطيفة بنت محمد بن راشد آل مكتوم.',
+        'تابع منشورات ثريا بنت ثويني بن سيف آل سعيد.',
       'og:type': 'profile',
       'og:locale': 'ar_SA',
       'twitter:card': 'summary_large_image',
-      'twitter:title': 'لطيفة بنت محمد | الصفحة الرسمية',
+      'twitter:title': 'ثريا بنت ثويني بن سيف آل سعيد | الملف الشخصي',
       'twitter:description':
-        'مساحة موثوقة لمتابعة أخبار ومبادرات الشيخة لطيفة بنت محمد.',
+        'تابع منشورات ثريا بنت ثويني بن سيف آل سعيد.',
     };
 
     Object.entries(metadata).forEach(([name, content]) => {

@@ -86,15 +86,12 @@ export default function AdminPosts() {
   const [commentAuthor, setCommentAuthor] = useState<Record<string, string>>({});
   const [likesInput, setLikesInput] = useState<Record<string, string>>({});
 
-  const royalAuthors = [
-    "الشيخة روضة بنت مكتوم بن راشد بن سعيد آل مكتوم",
-    "مريم بنت محمد بن راشد آل مكتوم",
-  ];
+  const defaultCommentAuthor = "ثريا بنت ثويني بن سيف آل سعيد";
 
   async function addRoyalComment(post: AdminPost) {
     const body = commentText[post.id]?.trim();
-    const authorName = commentAuthor[post.id] || royalAuthors[0];
-    if (!body) return;
+    const authorName = (commentAuthor[post.id] ?? defaultCommentAuthor).trim();
+    if (!body || !authorName) return;
     setUpdatingPostId(post.id);
     setError("");
     try {
@@ -319,12 +316,18 @@ export default function AdminPosts() {
                 )}
                 {post.status === "published" && (
                   <div className="admin-royal-comment">
-                    <select value={commentAuthor[post.id] || royalAuthors[0]} onChange={(event) => setCommentAuthor((current) => ({ ...current, [post.id]: event.target.value }))}>
-                      {royalAuthors.map((name) => <option key={name}>{name}</option>)}
-                    </select>
+                    <label htmlFor={`comment-author-${post.id}`}>اسم صاحب التعليق</label>
+                    <input
+                      id={`comment-author-${post.id}`}
+                      type="text"
+                      value={commentAuthor[post.id] ?? defaultCommentAuthor}
+                      onChange={(event) => setCommentAuthor((current) => ({ ...current, [post.id]: event.target.value }))}
+                      placeholder="اكتب الاسم الذي سيظهر مع التعليق"
+                      maxLength={120}
+                    />
                     <textarea value={commentText[post.id] || ""} onChange={(event) => setCommentText((current) => ({ ...current, [post.id]: event.target.value }))} placeholder="اكتبي التعليق الذي سيظهر على الصورة..." />
-                    <button type="button" onClick={() => void addRoyalComment(post)} disabled={!commentText[post.id]?.trim() || updatingPostId !== null}>
-                      <Send size={14} /> إضافة تعليق موثق
+                    <button type="button" onClick={() => void addRoyalComment(post)} disabled={!commentText[post.id]?.trim() || !(commentAuthor[post.id] ?? defaultCommentAuthor).trim() || updatingPostId !== null}>
+                      <Send size={14} /> نشر التعليق
                     </button>
                   </div>
                 )}

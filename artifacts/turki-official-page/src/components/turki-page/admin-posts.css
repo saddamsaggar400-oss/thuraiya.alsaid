@@ -219,7 +219,7 @@
   cursor: pointer;
 }
 
-.admin-royal-comment select,
+.admin-royal-comment input,
 .admin-royal-comment textarea {
   width: 100%;
   box-sizing: border-box;

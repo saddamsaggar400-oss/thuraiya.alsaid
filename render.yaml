@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: thuraiya-account
+    runtime: node
+    plan: free
+    buildCommand: >-
+      corepack enable && pnpm install --frozen-lockfile --prod=false &&
+      VITE_CLERK_PUBLISHABLE_KEY="$CLERK_PUBLISHABLE_KEY" pnpm --filter @workspace/turki-official-page run build &&
+      pnpm --filter @workspace/api-server run build
+    startCommand: node --enable-source-maps artifacts/api-server/dist/index.mjs
+    healthCheckPath: /api/healthz
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NODE_ENV
+        value: production
+      - key: BASE_PATH
+        value: /
+      - key: SERVE_WEB_APP
+        value: "true"
+      - key: RUN_DATABASE_MIGRATIONS
+        value: "true"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: thuraiya-db
+          property: connectionString
+      - key: CLERK_PUBLISHABLE_KEY
+        sync: false
+      - key: CLERK_SECRET_KEY
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+
+databases:
+  - name: thuraiya-db
+    plan: free
+    databaseName: thuraiya
+    user: thuraiya

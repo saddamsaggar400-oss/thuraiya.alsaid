@@ -314,7 +314,7 @@ router.get("/posts", async (req, res) => {
 });
 
 router.post("/posts", requireAuth, async (req, res) => {
-  const parsed = SaveMediaMetadataBody.safeParse(req.body);
+  const parsed = CreatePostBody.safeParse(req.body);
   if (!parsed.success) {
     res.status(400).json({ error: "Invalid post" });
     return;

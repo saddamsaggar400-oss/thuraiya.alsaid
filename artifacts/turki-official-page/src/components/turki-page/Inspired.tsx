@@ -954,7 +954,7 @@ export default function Inspired() {
         <div className="ig-profile-container">
           <header className="ig-profile-header">
             <div className="ig-profile-avatar">
-              <div className="ig-story-ring" onClick={() => setActiveTab("stories")}>
+              <div className="ig-story-ring" onClick={() => selectStorySlot(stories[0]?.slot ?? 1)}>
                 <img src={profileImage} alt="ثريا بنت ثويني بن سيف آل سعيد" />
               </div>
             </div>

@@ -107,7 +107,10 @@ router.delete("/admin/stories/:slot", requireAdmin, async (req, res): Promise<vo
         .limit(1);
 
       if (!story) return "not-found" as const;
-      await objectStorageService.deleteObjectEntity(story.objectPath);
+      // Bundled gallery images remain available to their original posts.
+      if (story.objectPath.startsWith("/objects/")) {
+        await objectStorageService.deleteObjectEntity(story.objectPath);
+      }
       await tx.delete(mediaFilesTable).where(eq(mediaFilesTable.id, story.id));
       return "deleted" as const;
     });
